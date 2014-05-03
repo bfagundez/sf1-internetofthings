@@ -4,8 +4,8 @@ var nforce = require('nforce');
 board = new five.Board();
 
 // add these as env variables
-var client_id ='3MVG9A2kN3Bn17htEIx9gueszQCwpACk_5Fy8g8cEeadT.59RcMAmzaHakHfwPrih.UWvBMd7hw_gPLkYJSqB';
-var client_secret ='9199412244496712486';
+var client_id ='';
+var client_secret ='';
 
 var org = nforce.createConnection({
   clientId: client_id,
@@ -17,7 +17,7 @@ var org = nforce.createConnection({
 // When the Arduino board is ready and connected
 board.on("ready", function(){
   // nforce Authentication
-  org.authenticate({ username: 'orobot@sfduino.com', password: 'r0b0t01010' },
+  org.authenticate({ username: '', password: '' },
     function(err, oauth) {
       if(err) return console.log(err);
 
@@ -46,8 +46,7 @@ board.on("ready", function(){
           var post = nforce.createSObject('FeedItem');
           post.set('Body', 'DING-DONG! Somebody is at the front door ringing the bell.');
           post.set('ParentId','0F9i0000000LNqZ')
-          org.insert({ sobject: post, oauth: oauth }, function(err, resp){
-            if(err) console.log(err)
+          org.insert({ sobject: post, oauth: oauth }, function(err, resp){ if(err) console.log(err)
           });
       });
   });
