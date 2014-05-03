@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Logs
 logs
 *.log
@@ -24,5 +22,4 @@ build/Release
 # Dependency directory
 # Deployed apps should consider commenting this line out:
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
->>>>>>> b24e6e2f1945c59fac3708d3aa84e17ea0aab2e8
 node_modules
